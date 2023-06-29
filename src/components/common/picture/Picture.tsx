@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageProps } from "@/@type/common";
-import { FadeInProps } from "@/components/animation/fade/useFadeIn";
+import { FadeInProps } from "@/components/animation/fade/fadeIn.tsx";
 import { createAnimation } from "@/components/animation/helper";
 
 export type PictureItemProps = {

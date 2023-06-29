@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import {MAIN_COLOR} from "@/data/global";
+import { MAIN_COLOR } from "@/data/global";
 
-import type {MainColorProps} from "@/@type/common";
-import type {AccordionEventKey} from "react-bootstrap/AccordionContext";
-import type {FadeInProps} from "@/components/animation/fade/useFadeIn";
+import type { MainColorProps } from "@/@type/common";
+import type { AccordionEventKey } from "react-bootstrap/AccordionContext";
+import type { FadeInProps } from "@/components/animation/fade/fadeIn.tsx";
 
-import {createAnimation} from "@/components/animation/helper";
+import { createAnimation } from "@/components/animation/helper";
 import parse from "html-react-parser";
 
-import {Accordion as BSAccordion} from "react-bootstrap";
+import { Accordion as BSAccordion } from "react-bootstrap";
 import LogoChevronDown from "@/components/common/logo/logoChevronDown/LogoChevronDown";
 
 export type AccordionItemType = {
@@ -22,9 +22,9 @@ export type AccordionProps = {
     items: AccordionItemType[]
 };
 
-const Accordion = ({color, items}: AccordionProps): React.ReactElement => {
-    const [active, isActive] = useState<AccordionEventKey | undefined>();
-    const animation: FadeInProps = createAnimation({type: 'fade-in', direction: 'up'});
+const Accordion = ({ color, items }: AccordionProps): React.ReactElement => {
+    const [ active, isActive ] = useState<AccordionEventKey | undefined>();
+    const animation: FadeInProps = createAnimation({ type: 'fade-in', direction: 'up' });
 
     return (
         <BSAccordion
@@ -37,13 +37,13 @@ const Accordion = ({color, items}: AccordionProps): React.ReactElement => {
                     {...animation}>
                     <BSAccordion.Header>
                         {item.title}
-                        <LogoChevronDown {...active === i.toString() && {color: MAIN_COLOR[color]}} />
+                        <LogoChevronDown {...active === i.toString() && { color: MAIN_COLOR[color] }} />
                     </BSAccordion.Header>
                     <BSAccordion.Body>{parse(item.description)}</BSAccordion.Body>
                 </BSAccordion.Item>
             ))}
         </BSAccordion>
-    )
+    );
 };
 
 export default Accordion;

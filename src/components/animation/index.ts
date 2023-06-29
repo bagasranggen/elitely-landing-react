@@ -1,6 +1,6 @@
-import useFadeIn, {FadeIn} from "@/components/animation/fade/useFadeIn";
+import { FadeIn, createFadeIn } from "@/components/animation/fade/fadeIn.tsx";
 
 export {
-    useFadeIn,
+    createFadeIn,
     FadeIn,
-}
+};

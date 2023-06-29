@@ -1,8 +1,5 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
-// import Image from "next/image";
-// import Link from "next/link";
-// import {useRouter} from "next/router";
 
 import { MAIN_NAVIGATION } from "@/data/mock/global";
 
@@ -27,17 +24,11 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
         setExpanded(open);
     };
 
-    // useEffect(() => {
-    //     const handleEnd = () => navbarToggleHandler(false);
-    //
-    //     router.events.on("routeChangeComplete", handleEnd);
-    //     router.events.on("routeChangeError", handleEnd);
-    //
-    //     return () => {
-    //         router.events.off("routeChangeComplete", handleEnd);
-    //         router.events.off("routeChangeError", handleEnd);
-    //     };
-    // }, [router.events])
+    useEffect(() => {
+        const handleEnd = () => navbarToggleHandler(false);
+
+        handleEnd();
+    }, [ pathname ]);
 
     return (
         <Navbar

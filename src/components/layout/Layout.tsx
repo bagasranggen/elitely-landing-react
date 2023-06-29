@@ -5,7 +5,7 @@ import { useMeasure } from "react-use";
 
 import Navigation from "@/components/layout/navigation/Navigation";
 import Footer from "@/components/layout/footer/Footer";
-import Init from "@/components/animation/init";
+import Init from "@/components/animation/init.tsx";
 
 export type LayoutProps = {
     children: React.ReactNode;

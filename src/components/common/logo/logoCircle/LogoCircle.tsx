@@ -1,6 +1,6 @@
 import React from 'react';
-import {FadeInProps} from "@/components/animation/fade/useFadeIn";
-import {createAnimation} from "@/components/animation/helper";
+import { FadeInProps } from "@/components/animation/fade/fadeIn.tsx";
+import { createAnimation } from "@/components/animation/helper";
 
 export type LogoCircleProps = {
     options?: {
@@ -8,8 +8,8 @@ export type LogoCircleProps = {
     }
 };
 
-const LogoCircle = ({options}: LogoCircleProps): React.ReactElement => {
-    const animation = options?.animation ? createAnimation(options.animation) : {}
+const LogoCircle = ({ options }: LogoCircleProps): React.ReactElement => {
+    const animation = options?.animation ? createAnimation(options.animation) : {};
 
     return (
         <div className="decorative circle-line" {...animation}>
@@ -27,7 +27,7 @@ const LogoCircle = ({options}: LogoCircleProps): React.ReactElement => {
                     strokeWidth="14" />
             </svg>
         </div>
-    )
+    );
 };
 
 export default LogoCircle;

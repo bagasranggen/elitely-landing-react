@@ -1,4 +1,4 @@
-import {FadeInDirectionItemProps, FadeInDirectionProps} from "@/components/animation/fade/useFadeIn";
+import { FadeInDirectionItemProps, FadeInDirectionProps } from "@/components/animation/fade/fadeIn.tsx";
 
 export const FADE_IN_DIRECTION: Record<FadeInDirectionProps, FadeInDirectionItemProps> = {
     left: {
@@ -17,4 +17,4 @@ export const FADE_IN_DIRECTION: Record<FadeInDirectionProps, FadeInDirectionItem
         direction: 'y',
         y: -50
     },
-}
+};

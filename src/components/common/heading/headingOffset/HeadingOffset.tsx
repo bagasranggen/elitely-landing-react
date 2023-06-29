@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import type { HeadingLevelProps, MainSizeProps } from "@/@type/common";
-import type { FadeInPositionProps, FadeInDelayProps } from "@/components/animation/fade/useFadeIn";
+import type { FadeInPositionProps, FadeInDelayProps } from "@/components/animation/fade/fadeIn.tsx";
 
 import { createAnimation } from "@/components/animation/helper";
 import { useMeasure } from "react-use";
