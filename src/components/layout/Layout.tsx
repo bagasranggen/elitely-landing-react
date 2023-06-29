@@ -1,6 +1,5 @@
 import React from 'react';
-// import { useRouter } from "next/router";
-
+import { useLocation } from "react-router-dom";
 import { useMeasure } from "react-use";
 
 import Navigation from "@/components/layout/navigation/Navigation";
@@ -15,9 +14,8 @@ const Layout = ({ children }: LayoutProps): React.ReactElement => {
     Init();
 
     const [ navigationRef, { top, bottom } ]: any = useMeasure();
-    // const {asPath} = useRouter();
-    // const pagePath = asPath.replace(/\//g, '-');
-    const pagePath = '';
+    const { pathname } = useLocation();
+    const pagePath = pathname.replace(/\//g, '-');
 
     return <>
         <Navigation ref={navigationRef} />
