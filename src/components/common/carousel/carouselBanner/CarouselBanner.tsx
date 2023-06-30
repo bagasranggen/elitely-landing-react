@@ -6,6 +6,8 @@ import parse from "html-react-parser";
 import { createAnimation } from "@/components/animation/helper";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from "swiper/react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { SwiperOptions as Options, Autoplay } from "swiper";
 
 import { Col, Container, Row } from "react-bootstrap";
@@ -30,7 +32,7 @@ export type CarouselBannerProps = {
     items: Array<any>;
 };
 
-const CarouselBanner = ({ className, items }: CarouselBannerProps): React.ReactElement => (
+const CarouselBanner = ({ items }: CarouselBannerProps): React.ReactElement => (
     <Swiper className="carousel--banner" {...CarouselSettings}>
         {items.map((item: any) => (
             <SwiperSlide key={item.title + item.titleBlock}>
@@ -65,7 +67,7 @@ const CarouselBanner = ({ className, items }: CarouselBannerProps): React.ReactE
                                 className={`${item?.options?.columns?.first ? `${item?.options?.columns?.first} ` : ''}carousel__title${item.color ? ` carousel__title--${item.color}` : ''}`}
                                 {...item?.options?.columnsSize?.first}>
                                 <h2>{item.title}<br />
-                                    <LogoHeartLine color={MAIN_COLOR[item.color as keyof Object]} /><span>{item.titleBlock}</span>
+                                    <LogoHeartLine color={MAIN_COLOR[item.color as keyof NonNullable<unknown>]} /><span>{item.titleBlock}</span>
                                 </h2>
                             </Col>
                             <Col

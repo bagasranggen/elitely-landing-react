@@ -3,6 +3,8 @@ import React from 'react';
 import { createAnimation } from "@/components/animation/helper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { SwiperOptions as Options, Pagination } from "swiper";
 
 import LogoHeart from "@/components/common/logo/logoHeart/LogoHeart";

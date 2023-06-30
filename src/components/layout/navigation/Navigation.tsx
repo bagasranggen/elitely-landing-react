@@ -9,8 +9,10 @@ import { Col, Container, Nav, Navbar } from "react-bootstrap";
 import Button from "@/components/common/button/Button";
 import Picture from "@/components/common/picture/Picture.tsx";
 
-export type NavigationProps = {};
+export type NavigationProps = NonNullable<unknown>;
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
     // const router = useRouter();
     const { pathname } = useLocation();

@@ -4,6 +4,8 @@ import { createAnimation } from "@/components/animation/helper";
 
 import { Card } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Pagination, SwiperOptions as Options } from "swiper";
 
 import 'swiper/css';

@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { SwiperOptions as Options, Pagination } from "swiper";
 
 import Card, { CardListProps, CardProps } from "@/components/common/cards/card/Card";
