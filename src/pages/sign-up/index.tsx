@@ -14,7 +14,7 @@ export type IndexProps = {};
 
 const Index = ({}: IndexProps): React.ReactElement => (
     <>
-        <HeaderHead />
+        <HeaderHead title={'Welcome to Elitely'} />
 
         <section className="form-sign__section">
             <Container className="my-5">
