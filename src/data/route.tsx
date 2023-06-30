@@ -6,6 +6,7 @@ import SignUp from "@/pages/sign-up";
 import HowItWorks from "@/pages/how-it-works";
 import Faqs from "@/pages/faq";
 import TermsConditions from "@/pages/terms-conditions";
+import ContactUs from "@/pages/contact-us";
 
 export const route = createBrowserRouter([
     {
@@ -36,6 +37,12 @@ export const route = createBrowserRouter([
         path: '/terms-conditions',
         element: <Layout>
             <TermsConditions />
+        </Layout>,
+    },
+    {
+        path: '/contact-us',
+        element: <Layout>
+            <ContactUs />
         </Layout>,
     },
 ]);

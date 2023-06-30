@@ -67,7 +67,7 @@ const Button = ({ button, className, event, link, option }: ButtonProps): React.
 
     const buttonWrapperProps: any = link ? {
         ...btnClass ? { className: btnClass } : {},
-        href: link.href,
+        to: link.href,
         ...link.openNewTab ? { target: '_blank' } : {},
         onClick: event?.onClick,
     } : {
