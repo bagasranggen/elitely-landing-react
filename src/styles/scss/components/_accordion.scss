@@ -1,0 +1,60 @@
+.accordion {
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &-button {
+        @extend %fs-18, %align-items-baseline;
+        font-weight: 600;
+
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        svg {
+            @extend %d-block, %ms-auto;
+            @include make-transition(transform);
+
+            min-width: 16px;
+        }
+
+        &[aria-expanded='false'] {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        &[aria-expanded='true'] {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:after {
+            content: unset;
+        }
+    }
+
+    &-body {
+        padding-top: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    @each $key, $value in $main-color-set {
+        &--#{$key} {
+            .accordion {
+                &-button,
+                &-body {
+                    background-color: map-get($value, light);
+                }
+
+                &-button {
+                    &[aria-expanded='true'] {
+                        color: map-get($value, regular);
+                    }
+                }
+            }
+        }
+    }
+}

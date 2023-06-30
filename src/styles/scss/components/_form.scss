@@ -1,0 +1,116 @@
+.form {
+    &-contact {
+        h2 {
+            @extend %ff-playfair, %text-center;
+        }
+
+        &--simplified {
+            padding: 30px 20px;
+            background-color: $white;
+            border: 1px solid #DDDDDD;
+            border-radius: 8px;
+            box-shadow: 0px 1px 3px rgba(2, 1, 1, 0.1), 0px 2px 1px rgba(2, 1, 1, 0.06), 0px 1px 1px rgba(2, 1, 1, 0.08);
+
+            @include media-breakpoint-up(lg) {
+                padding: 30px 60px;
+            }
+
+            h2 {
+                @extend %fs-20, %fs-md-24, %fc-primary, %mb-4;
+            }
+
+            .btn {
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &--regular {
+            .btn.btn--lg {
+                @extend %fs-18;
+                padding-top: .75rem;
+                padding-bottom: .75rem;
+            }
+        }
+    }
+
+    &-sign {
+        &__section {
+            @extend %overflow-hidden, %position-relative;
+
+        }
+
+        &__media {
+            picture {
+                @extend %d-block, %position-relative;
+
+                @include media-breakpoint-up(xl) {
+                    transform: translateX(-10%);
+                }
+            }
+
+            &:before,
+            &:after {
+                @extend %position-absolute;
+
+                content: "";
+                background-color: $e-primary;
+                pointer-events: none;
+                z-index: -1;
+            }
+
+            &:before {
+                left: 0;
+                height: 50vh;
+                width: 100%;
+
+                @include media-breakpoint-up(md) {
+                    height: 100%;
+                    width: 50vw;
+                }
+            }
+
+            &:after {
+                --size: 120vh;
+
+                top: 0;
+                right: calc(50vw - 18rem);
+                //right: translateY(calc(var(--size) / 4 * -1));
+                //transform: translateY(-15%);
+                transform: translateY(calc(100vh / 3 * -1));
+                width: var(--size);
+                height: var(--size);
+                clip-path: circle();
+
+                @include media-breakpoint-up(md) {
+                    --size: 140vh;
+                    right: calc(50vw - 10rem);
+                    //right: translateY(calc(var(--size) / 4 * -1));
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    transform: translateY(calc(100vh / 3 * -1));
+                    //transform: translateY(-23%);
+                }
+            }
+
+        }
+
+        &__wrapper {
+
+
+            //h1 {
+            //    @extend %fs-30;
+            //}
+        }
+
+        &__greetings {
+            @include media-breakpoint-up(lg) {
+                a:not(:hover) {
+                    color: $e-body-color;
+                }
+            }
+        }
+    }
+}

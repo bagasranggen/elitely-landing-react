@@ -1,0 +1,61 @@
+// Color
+$e-primary: #B2294B;
+$e-m-primary: #EBC0C9;
+$e-l-primary: #F7EAED;
+$e-secondary: #E4BC28;
+$e-l-secondary: #FCF8E9;
+$e-tertiary: #32C08D;
+$e-l-tertiary: #EAF9F4;
+$e-d-light: #F5F5F5;
+$e-dark: #334155;
+$e-l-dark: #2D2D2D;
+$e-body-color: var(--bs-body-color);
+
+$main-color-set: (
+        primary: (regular: $e-primary, light: $e-l-primary),
+        secondary: (regular: $e-secondary, light: $e-l-secondary),
+        tertiary: (regular: $e-tertiary, light: $e-l-tertiary)
+);
+
+// Font Sizes
+$font-sizes-set: (
+        10: (size: 10px, line-height: 13px),
+        12: (size: 12px, line-height: 18px),
+        14: (size: 14px, line-height: 21px),
+        16: (size: 16px, line-height: 24px),
+        18: (size: 18px, line-height: 27px),
+        20: (size: 20px, line-height: 30px),
+        22: (size: 22px, line-height: 33px),
+        24: (size: 24px, line-height: 36px),
+        30: (size: 30px, line-height: 36px),
+        32: (size: 32px, line-height: 38px),
+        36: (size: 36px, line-height: 43px),
+        40: (size: 40px, line-height: 48px),
+        56: (size: 56px, line-height: 68px),
+);
+$font-color-set: (
+        primary: (regular: $e-primary, light: $e-l-primary),
+        secondary: (regular: $e-secondary, light: $e-l-secondary),
+        tertiary: (regular: $e-tertiary, light: $e-l-tertiary),
+);
+
+// Border
+$border-color: $e-dark;
+$input-border-color: $e-dark;
+$dropdown-border-color: $e-dark;
+
+// Navbar
+$navbar-padding-y: 15px;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: transparentize($e-l-primary, .25);
+
+// Accordion
+$accordion-padding-y: 1.5rem;
+$accordion-padding-x: $accordion-padding-y;
+$accordion-border-width: 0;
+$accordion-button-focus-box-shadow: none;
+
+// Breadcrumb
+$breadcrumb-divider-color: transparentize($e-l-dark, .5);
+$breadcrumb-active-color: $e-l-dark;
+$breadcrumb-divider: quote(">");

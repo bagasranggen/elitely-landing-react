@@ -1,0 +1,127 @@
+.cards {
+    &__card {
+        border: 0.5px solid #A6A6A6;
+        border-radius: 8px;
+
+        @each $key, $value in $main-color-set {
+            &--#{$key} {
+                background-color: map-get($value, light);
+            }
+        }
+
+        &--love {
+            padding: 40px 24px 40px;
+
+            @include media-breakpoint-up(lg) {
+                padding: 48px 36px 36px;
+            }
+        }
+
+        &--list {
+            padding: 30px 25px;
+
+            ul {
+                @extend %mb-0;
+            }
+        }
+    }
+
+    &--block,
+    &--block-list {
+        h2 {
+            @extend %fs-24, %ff-playfair, %mt-5;
+        }
+    }
+
+    &--block {
+        h2 {
+            @extend %fs-24;
+        }
+
+        .cards {
+            &__card {
+                @extend %text-center;
+            }
+        }
+    }
+
+    &--block-list {
+        h2 {
+            @extend %fs-40, %d-flex, %justify-content-center;
+            margin-bottom: 40px;
+
+            picture {
+                display: contents;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+    }
+
+    &--alternate {
+        h2 {
+            @extend %ff-playfair, %fs-30, %fs-md-32, %mb-3;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 80px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 120px;
+            }
+        }
+
+        .btn {
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &--image {
+        .cards__card {
+
+            .card {
+                &-title {
+                    @extend %text-center, %fs-22;
+
+                    font-style: italic;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+
+                &-body {
+                    padding: 20px 20px 40px;
+                }
+            }
+
+            @each $key, $value in $main-color-set {
+                &--#{$key} {
+                    background-color: $white;
+                    border-color: map-get($value, regular);
+
+                    .card-title {
+                        color: map-get($value, regular);
+                    }
+
+                    .list-dashed {
+                        margin-bottom: 0;
+
+                        li {
+                            &:before {
+                                background-color: map-get($value, regular);
+                            }
+
+                            &:after {
+                                border-left-color: map-get($value, regular);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
